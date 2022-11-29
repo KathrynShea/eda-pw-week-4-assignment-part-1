@@ -113,8 +113,46 @@ console.log('Test - should be "2130"', sumAll(thisArray));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function positiveNumbers(Array){
+  let newArray = [];
+  for (num of Array){
+    if (num > 0){
+      newArray.push(num);
+    }
+  }
+  return newArray;
+
+}
+let numbersArray = [3, 4, 5, 10, 50, -30, 20, -1, 0, 45, -3];
+console.log('Test - should be "[3, 4, 5, 10, 50, 20, 45]"', positiveNumbers(numbersArray));
+let negativeOnly = [-1, -2, -3, -4.5, -2000];
+console.log('Test - should be "[]"', positiveNumbers(negativeOnly));
+
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+function HackerSpeak(sentence){
+  let newSentence = '';
+  for (let i in sentence){
+    if (sentence.charAt(i).toLowerCase() === 'a'){
+      newSentence += "4";
+    }else if (sentence.charAt(i).toLowerCase() === 'e'){
+      newSentence += "3";
+    }else if (sentence.charAt(i).toLowerCase() === 'i'){
+      newSentence += "1";
+    }else if (sentence.charAt(i).toLowerCase() === 'o'){
+      newSentence += "0";
+    }else if (sentence.charAt(i).toLowerCase() === 's'){
+      newSentence += "5";
+    }else{
+      newSentence += sentence.charAt(i);
+    }
+  } return newSentence;
+ 
+
+}
+console.log('Test - should say "Wh0 d0 y0u th1nk 1 4m?"', HackerSpeak("Who do you think I am?"));
+console.log('Test - should say "My n4m3 15 K4thryn 5h34 5z0mb4tf4lvy"', HackerSpeak("My name is Kathryn Shea Szombatfalvy"));
