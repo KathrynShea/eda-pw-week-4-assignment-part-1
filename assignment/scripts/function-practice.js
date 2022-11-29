@@ -77,9 +77,6 @@ console.log('Test - should say "true"', find('fish', myArray));
 console.log('Test - should say "true"', find('toad', myArray));
 console.log('Test - should say "false"', find('apple', myArray));
 
-
-
-
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -133,6 +130,12 @@ console.log('Test - should be "[]"', positiveNumbers(negativeOnly));
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+// from EDAbit https://edabit.com/challenge/cada8J3AWGRhwQhkk
+//Create a function that takes a string as an argument and returns 
+//a coded (h4ck3r 5p34k) version of the string.
+//In order to work properly, the function should replace all "a"s with 4, 
+//"e"s with 3, "i"s with 1, "o"s with 0, and "s"s with 5.
+
 
 function HackerSpeak(sentence){
   let newSentence = '';
@@ -151,8 +154,6 @@ function HackerSpeak(sentence){
       newSentence += sentence.charAt(i);
     }
   } return newSentence;
- 
-
 }
 console.log('Test - should say "Wh0 d0 y0u th1nk 1 4m?"', HackerSpeak("Who do you think I am?"));
 console.log('Test - should say "My n4m3 15 K4thryn 5h34 5z0mb4tf4lvy"', HackerSpeak("My name is Kathryn Shea Szombatfalvy"));
