@@ -65,7 +65,7 @@ console.log('Test - should say "undefined"', getLast(emptyArray));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  for (thing of array){
+  for (let thing of array){
     if (thing === value){
       return true;
     }
@@ -95,7 +95,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll(Array) {
   let sum = 0
   // TODO: loop to add items
-  for (num of Array){
+  for (let num of Array){
     sum += num;
   }
   return sum;
@@ -112,7 +112,7 @@ console.log('Test - should be "2130"', sumAll(thisArray));
 
 function positiveNumbers(Array){
   let newArray = [];
-  for (num of Array){
+  for (let num of Array){
     if (num > 0){
       newArray.push(num);
     }
